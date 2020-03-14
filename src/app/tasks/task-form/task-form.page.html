@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>task-form</ion-title>
+    <ion-title>{{ title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position= "stacked">Descrição</ion-label>
+      <ion-textarea [(ngModel)]="task.description" name="description" rows="5"></ion-textarea>
+      <ion-button expand="block" type="submit">Salvar</ion-button>
+    </ion-item>
 
-</ion-content>
+
+  </form>
+ </ion-content>

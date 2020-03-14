@@ -14,4 +14,8 @@ export class TaskListPage implements OnInit {
   ngOnInit() {
     this.tasks = this.taskService.getAll();
   }
+
+  delete(task: Task){
+    this.taskService.delete(task.id);
+  }
 }
